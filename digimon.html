@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Digimons</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="https://kit.fontawesome.com/3846bb7b1b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<nav class="navbar" id="nav-bar">
+		<ul id="navList">
+			<li><a href="index.html"><img src="assets/img/digivice-unscreen-2.png" class="img-nav">Home</a></li>
+			<li><a href="games.html"><img src="assets/img/atari-joystick.png" class="img-nav">Games</a></li>
+			<li><a href="digimon.html"><img src="assets/img/patamon_small.png" class="img-nav">Digimon</a></li>
+			<li><a href=""><img src="assets/img/in.png" class="img-nav">About</a></li>
+		</ul>
+	</nav>
+	<button id="burger-button"><i class="fa-solid fa-bars"></i></button>
+
+	<div class="main-container" id="main-c">
+		<div class="digimon-container" id="digimon-c">
+
+			<input type="text" id="digimon-search" placeholder="Search digimon" data-search>
+
+			<div class="container-cards" id="cards-c" data-digimon-cards-container>
+				<template data-digimon-template>
+					<div class="card">
+						<img class="image" data-img>
+						<div class="header" data-header></div>
+						<div class="body" data-body></div>
+					</div>
+				</template>
+			</div>
+			
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/digimon.js"></script>
+</body>
+</html>
