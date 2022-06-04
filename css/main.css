@@ -11,34 +11,6 @@ html, body{
     background-size: 30px 30px;
 }
 
-
-.navbar{
-	/*font-family: 'PT Mono', monospace;*/
-	font-family: 'VT323', monospace;
-	font-size: 36px;
-	/*letter-spacing: .2rem;*/
-	word-spacing: 4rem;
-	text-align: center;
-}
-
-.navbar li{
-
-	display: inline;
-}
-
-.navbar a{
-
-	color: #FFD24C;
-	/*text-transform: lowercase;*/
-	text-transform: lowercase;
-	text-decoration: none;
-}
-
-.navbar a:hover{
-
-	text-decoration: overline;
-}
-
 header{
 	text-align: center;
 }
@@ -55,80 +27,8 @@ header{
 	cursor: pointer;
 }
 
-.fa-bars{
-
-	font-size: 25px;
-}
-
-.img-nav{
-
-	width: 18px;
-	height: 18px;
-	margin: 0.5em 0.2em 0 0;
-}
-
-
-#nav-bar.active #navList{
-
-	visibility: visible;
-	overflow-y: auto;
-}
-
-.main-container{
-
-	padding: 1em;
-}
-
-.container-welcome{
-
-	margin: 12em auto;
-	max-width: 620px;
-	height: 420px;
-	background-color: #2B2B2B;
-	font-family: 'Press Start 2P', monospace;
-	color: #fff;
-	position: relative;
-	/*border-radius: 20px;*/
-}
-
-.container-welcome h4{
-
-	position: absolute;
-	left: 21%;
-	top:5%;
-}
-
-.container-welcome img{
-
-	position: absolute;
-	left: 40%;
-	bottom:8%;
-	width: 100px;
-	height: 100px;
-}
-
-.container-btn{
-
-	display: flex;
-	flex-direction: column;
-	position: absolute;
-	left: 32%;
-	top: 46%;
-}
-
-
-.w-links{
-
-	font-size: 14px;
-	padding: 0.3em;
-	text-decoration: none;
-	color: #fff;
-}
-
-.w-links:hover{
-
-	color: #000;
-	background-color: #fff;
+.row{
+	text-align: center;
 }
 
 .card{
@@ -138,6 +38,7 @@ header{
 	text-align: center;
 	background-color: #fff;
 	box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+	transition: 0.6s ease-in-out;
 }
 
 .card img{
@@ -146,6 +47,9 @@ header{
 	height: 80px;
 }
 
+.card:hover{
+	transform: scale(1.2);
+}
 
 #digimon-c{
 
@@ -168,6 +72,11 @@ header{
 	max-width: 1200px;
 }
 
+.digimon-container h2{
+	font-family: 'VT323', monospace;
+	color: orange;
+}
+
 #cards-c{
 
 	margin-top: 4em;
@@ -182,64 +91,74 @@ header{
   display: none;
 }
 
+.game-container{
+
+	margin: 4em auto;
+}
+
+.digimon-card{
+
+	background-color: #fff;
+	box-shadow: 1px 1px 1px 1px gray;
+	cursor: pointer;
+	display: inline-block;
+	width: 120px;
+	height: 120px;
+}
+
+.digimon-card img{
+	width: 100%;
+	height: 100%;
+}
+
+footer{
+
+	text-align: center;
+	color: #cc8500;
+	margin: 4em auto;
+	font-family: monospace;
+	padding: 0.3em;
+}
+
+footer a {
+
+	text-decoration: none;
+	color: #ffa366;
+	/*font-size: 12px;*/
+}
+
+#about-api a{
+	text-decoration: underline;
+}
+
+#about-api a:hover{
+	text-decoration: none;
+}
+
+.fa-github-alt{
+
+	margin-left: 0.2em;
+}
+
+/*.hide-card {
+  display: none;
+}
+*/
+
 @media(max-width: 700px){
-
-	#burger-button{
-
-		display: inline;
-		position: absolute;
-		right: 5%;
-		top: 3%;
-	}
-
-	.navbar{
-
-		visibility: hidden;
-		overflow-y: hidden;
-	}
-
-	.navbar li{
-
-		display: block;
-	}
-
-
-	.img-nav{
-
-		width: 12px;
-		height: 12px;
-	}
-
-	.container-welcome h4{
-
-		left: 28%;
-	}
-
-	.container-welcome{
-
-		border-radius: 0;
-		margin-top: 2em;
-	}
-
-	.container-welcome img{
-
-		left:37%;
-	}
-
-	.container-btn{
-
-		left: 24%;
-	}
-
-	.w-links{
-
-		padding: 0.3em;
-		text-decoration: none;
-		color: #fff;
-	}
 
 	#cards-c{
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.digimon-card{
+		width: 60px;
+		height: 60px;
+	}
+
+	.card{
+		box-shadow: none;
+		background-color: transparent;
 	}
 }
 
